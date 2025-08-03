@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  backend:
+   build:
+    context: ./backend
+   container_name: backend
+   ports:
+    - "5001:5000"
+   networks:
+    - pizza-rede
+   volumes:
+    - ./backend:/app
+
+  frontend:
+   build:
+    context: ./frontend
+   container_name: frontend
+   ports:
+    - "80:80"
+   depends_on:
+    - backend
+   networks:
+    - pizza-rede
+
+networks:
+ pizza-rede:
+  driver: bridge
+
