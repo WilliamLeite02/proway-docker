@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === CONFIGURÁVEIS ===
-REPO_SSH="git@github.com:Williamleite02/sua-pizzaria.git"
+REPO_SSH="https://github.com/WilliamLeite02/proway-docker.git"
 DEST_DIR="/opt/pizzaria"
 
 # === Instala dependências ===
